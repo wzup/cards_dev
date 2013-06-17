@@ -1,0 +1,88 @@
+/*some scc
+*= require cards/global/global
+*/
+
+.w490 {
+   width: 490px;
+}
+
+.w350 {
+   width:350px;
+}
+
+#center {
+   display: inline-block;
+   width: 270px;
+   margin-left: -20px;
+   margin-top: 80px;
+}
+
+#l_col > div:nth-child(1) {
+   /**font-size: 15px;*/
+}
+
+#hello_txt_m {
+   margin-bottom: 20px;
+   text-align: center;
+	position: relative;
+}
+
+/** inner layout */
+.inLay {
+   padding:0px 5px;
+}
+
+/** language change */
+#lch {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background-color: #fff;
+	top: 19px;
+	left: 935px;
+	display: block;
+}
+
+#sgBtn input[type=submit] {
+   margin-left:100px;
+}
+
+.r_col1 {
+   width:160px;
+   padding: 0px 10px;
+}
+
+#r_warn_m {
+   width:230px;
+   padding:5px 10px;
+}
+
+.col_title {
+   font-size:17px;
+}
+
+.demLime {
+	border-right: 1px solid #f0f0f0;
+}
+
+.reg_m {
+}
+.reg_m {
+}
+
+.li_user:hover {
+   outline:1px dotted #ccc;
+}
+
+.li_user {
+   width:230px;
+   margin-bottom:2px;
+}
+
+.nolog {
+	padding:10px 50px;
+}
+
+.c_title {
+   padding:5px;
+}

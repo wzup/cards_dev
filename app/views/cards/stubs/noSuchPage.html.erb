@@ -1,0 +1,14 @@
+<div id="stub_m" class="mza mt50">
+   <span class="stub_title"><%= t("stubs.opa") %></span>
+   <p><%= t("stubs.noSuchPage") %></p>
+   <p><%= t("stubs.butUcan") %></p>
+   <% if(@role.to_s =~ /(1|2|3)/) %>
+      <%#= t("stubs.startNewFromYourProfile") %>
+      <br>
+      <br>
+      <a href="<%= url_for(:root) %>"><%= t("stubs.goToStartPage") %></a>
+      <br>
+      <br>
+      <a href="<%= url_for(:back) %>"><%= t("stubs.goToPrevPage") -%> </a>
+   <% end %>
+</div>

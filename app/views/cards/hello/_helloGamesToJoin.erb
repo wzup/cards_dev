@@ -1,0 +1,10 @@
+<div id="" class=""><%= raw(t("hello.gamesToJoin")) %>:</div>
+<% if @curGames.to_a.length > 0 -%>
+   <ul id="ulg">
+      <% @curGames.each { |r| -%>
+         <li>
+            <%= link_to(r.gamekey, cards.join_game_path(r), {:method => :post}) -%>
+         </li>
+      <% } -%>
+   </ul>
+<% end -%>

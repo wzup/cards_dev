@@ -1,0 +1,16 @@
+﻿<div id="stub_m" class="mza mt30">
+   <span class="stub_title"><%= t("stubs.opa") %></span>
+   <p><%= t("stubs.noSuchGame") %></p>
+   <% if(@role.to_s =~ /(1|2|3)/) %>
+      <%= t("stubs.butUcan") %>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="<%= url_for(:root) %>"><%= t("stubs.goToStartPage") %></a>
+      <br>
+      <br>
+      <a href="<%= url_for(:back) %>"><%= t("stubs.goToPrevPage") -%> </a>
+   <% end %>
+   <%#= render("partials/info") %>
+</div>

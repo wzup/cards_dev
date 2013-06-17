@@ -1,0 +1,21 @@
+<div id="l_col" class="fl_l w350">
+  <% if(cookies[:alert]) -%>
+    <p><%= cookies[:alert] -%></p>
+    <% cookies.delete(:alert) -%> 
+  <% end -%> 
+  <div><%= raw(t("hello.startGame1")) %></div>
+  <div id="sgBtn" class="mt50">
+     <form action="<%= cards.games_path() %>" method="post" accept-charset="utf-8">
+        <input type="submit" value="<%= t("hello.sg") %>">
+     </form>
+  </div>
+</div>
+
+<div id="r_col" class="fl_r w350">
+   <%= render("cards/hello/helloGamesToJoin") %>
+</div>
+
+<div id="center">
+   <img src="/assets/cards/cards_chips.jpg">
+</div>
+<div style="clear: both;"></div>

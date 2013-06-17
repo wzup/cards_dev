@@ -1,0 +1,32 @@
+<div id="l_col" class="fl_l">
+   <!-- <div><%= t("hello.whyNoRegTitle1") %>&nbsp;<%= t("hello.whyNoRegTitle2") -%></div> -->
+   <div><%= raw(t("hello.startGame1")) %></div>
+   <div id="sgBtn" class="mt50">
+      <form action="<%= cards.games_path() %>" method="post" accept-charset="utf-8">
+         <input type="submit" value="<%= t("hello.sg") %>">
+      </form>
+   </div>
+
+   <%# ЭТО УДАЛИТЬ. ПОКА ПОДЕРЖУ. %>
+   <ul>
+      <% if(@users)
+         @users.each.each_with_index { |u, i|
+      %>
+         <li id="u_<%= i %>" class="cursPoint li_user">
+            <code>:<span name="l"><%= u.login %></span> => "<span name="p"><%= u.pass %></span>"</code>
+         </li>
+      <% }; end %>
+   </ul>
+</div>
+
+
+<div id="r_col" class="fl_r">
+   <%= render("cards/hello/helloGamesToJoin") %>
+
+   <%# ЭТО УДАЛИТЬ. ПОКА ПОДЕРЖУ. %>
+   <div class="r_col1 mza">
+      <span class="col_title"><%#= t(:hello)[:loginTitle] %></span>
+   </div>
+
+</div>
+<div style="clear: both;"></div>

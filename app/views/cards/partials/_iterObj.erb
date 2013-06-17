@@ -1,0 +1,8 @@
+<br><br>
+<% (obj.public_methods - Object.methods).each { |i|
+	begin %>
+	<%= raw("<b>#{i}</b>:") %><%= obj.send(i).inspect %><br><br>
+<% rescue(Exception) %>
+	<%= "ERROR: #{i}" %><br><br>
+<% end } %>
+<br><br>

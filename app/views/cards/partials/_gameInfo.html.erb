@@ -1,0 +1,38 @@
+<br>
+<br>
+<br>
+<p>session: <b><%= session %></b></p>
+<p>cookies: <b><%= cookies[:name] %></b></p>
+<p>@role: <b><%= @role.inspect %></b></p>
+<p>conf: <%= @conf %></p>
+<p>Time.new.utc.strftime: <b><%= Time.new.utc.strftime("%Y-%m-%d %H:%M:%S") %></b></p>
+<br><br>
+      <p>@thisGame.size: <%#= @thisGame.size %></p>
+      <p>@thisGame.to_a<%#= @thisGame.to_a[0].upd_at %></p>
+      <p>@cards: <%= @cards.to_a %></p>
+      <p>auth_token: <%= token_tag(nil).inspect %></p>
+      <%= render("cards/partials/info") %>
+		<br><br>
+		<%= request.remote_ip.to_s %>
+		<br><br>
+		@cards: <%= @cards %>
+		<br>
+		<br>
+		@beginner: <%= @beginner.attributes %>
+		<br>
+		<br>
+		@beginner: <%= @beginner.as_json.pretty_inspect %>
+		<br>
+		<br>
+		@gameStarted: <%= @gameStarted %>
+		<br>
+		<br>
+    <% if(!@me.nil?) -%>
+      @me: <%= @me.attributes %>
+    <% end -%> 
+		<br>
+		<br>
+		@thisGame: <%= @thisGame.attributes %>
+    <br>
+    <br>
+    params: <%= params %>   

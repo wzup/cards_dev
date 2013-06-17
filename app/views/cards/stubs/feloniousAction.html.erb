@@ -1,0 +1,21 @@
+﻿<div id="stub_m" class="mza mt30">
+   <span class="stub_title"><%= t("stubs.opa") %></span>
+   <p><%= t("stubs.gamePlayed") %></p>
+   <% if(@role.to_s =~ /(2|3)/) %>
+      <%= t("stubs.startNewFromYourProfile") %>
+      <br>
+      <br>
+      <br>
+      <a href="<%= url_for(
+         :user => session["login"],
+         :controller => "users",
+         :action => "show",
+      ) %>"><%= t("stubs.goToYourProf") %></a>
+   <% else %>
+      <%= t("stubs.regAndCreate") %>
+      <br>
+      <br>
+      <br>
+      <a href="<%= url_for(:root) %>"><%= t("stubs.goToRootPage") %></a>
+   <% end %>
+</div>

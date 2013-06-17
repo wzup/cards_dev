@@ -1,0 +1,25 @@
+<div id="hello_txt_m" class="mza gcol fs17 mt30">
+	<p><%= t("hello.welcomeTxt1") %></p>
+	<% if(params["locale"] == "ru" || params["locale"].nil?) %>
+		<a href="<%= url_for(:locale => "en") %>" title="In English" id="lch" style="background-image: url(/assets/cards/usa16x16.png);"></a>
+	<% elsif(params["locale"] == "en") %>
+		<a href="<%= url_for(:locale => "ru") %>" title="По-русски" id="lch" style="background-image: url(/assets/cards/rus16x16.jpg);"></a>
+	<% end %>
+</div>
+<br>
+
+<div class="inLay">
+   <div class="mt15">
+      <%= render("cards/hello/helloTjOfSite") -%>
+   </div>
+   <div class="mt15">
+      <%= render("cards/hello/helloWhatForSite") -%>
+   </div>
+   <div class="mt70">
+      <% if(cookies[:alert]) -%>
+        <div class="c_title wcol bord1 tac mb20"><%= cookies[:alert] -%></div>
+        <% cookies.delete(:alert) -%> 
+      <% end -%> 
+      <%= render("cards/hello/hello2columns") -%>
+   </div>
+</div>

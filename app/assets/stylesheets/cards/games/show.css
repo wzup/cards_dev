@@ -1,0 +1,57 @@
+/* css для страницы игры, где карты
+*= require_self
+*= require cards/global/global
+*/
+.card {
+	width:115px;
+	height:160px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:inline-block;
+	margin-bottom:20px;
+   background-repeat:no-repeat;
+   background-size: 115px 160px;
+}
+
+.mr20 { margin-right:20px; }
+
+.warnBlock {
+   width:217px;
+   margin-left:12px;
+}
+
+
+#cardDesk {
+	width:710px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#gameInfo {	width:270px; }
+
+.gi_ul { margin-top: 5px; }
+
+.gi_li_k { padding-left:35px; }
+
+.gi_li_v {
+	padding-left:55px;
+	margin-bottom:10px;
+	font-weight:bold;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.sip {
+	font-size:12px;
+	font-weight:normal;
+}
+
+#gi_hr {
+	margin-left:25px;
+	margin-top:30px;
+	margin-bottom:10px;
+	width:210px;
+	display:inline-block;
+}

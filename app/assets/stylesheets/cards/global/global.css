@@ -1,0 +1,156 @@
+body {
+   margin:0px;
+   padding:0px;
+	color:#333;
+}
+
+.mza {
+    margin: 0px auto;
+}
+
+.mt30 {
+   margin-top:30px;
+}
+
+.mt70 {
+   margin-top: 70px;
+}
+
+.mt15 {
+   margin-top: 15px;
+}
+
+.mt50 {
+   margin-top: 50px;
+}
+
+.mt90 {
+   margin-top: 90px
+}
+
+.mb50 {
+   margin-bottom:50px;
+}
+
+.mb20 {
+   margin-bottom:20px;
+}
+
+.cursPoint {
+   cursor: pointer;
+}
+
+.tac {
+   text-align: center;
+}
+
+.layout_m {
+   width: 980px;
+}
+
+#stub_m {
+   width:750px;
+}
+
+.stub_title {
+   font-weight:bold;
+   font-size:17px;
+}
+
+.fs17 {
+    font-size: 17px;
+}
+
+a {
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+.mpz {
+	margin:0px;
+	padding:0px;
+}
+
+.lstn {
+	list-style-type: none;
+}
+
+.outline {
+	outline:1px dotted black;
+}
+
+.fl_l {
+	float:left;
+}
+
+.fl_r {
+	float:right;
+}
+
+.dispnone {
+	display:none;
+}
+
+.visbhid {
+	visibility:hidden;
+}
+
+.dispinlbl {
+	display:inline-block;
+}
+
+.dispbl {
+   display: block;
+}
+
+img {
+	border:0;
+}
+
+.tgLink {
+   border-bottom: 1px dashed blue;
+   cursor: pointer;
+}
+
+/** warn color */
+.wcol {
+	background-color:#FEE7E8;
+}
+
+.bord2 {
+   border:2px solid #C03;
+}
+
+.bord1 {
+   border:1px solid #C03;
+}
+
+
+
+/** green color */
+.gcol {
+	background-color:#DBFFDB;
+	border: 1px solid #47B53B;
+}
+
+/** neutral color */
+.ncol {
+   background-color:#EEE;
+	border: 1px solid #5C5C5C;
+}
+
+/** light blue color */
+.lbcol {
+	background-color:#FFE5FF;
+}
+
+.clearfix:after {
+   content: ".";
+   display: block;
+   height: 0;
+   clear: both;
+   visibility: hidden;
+}

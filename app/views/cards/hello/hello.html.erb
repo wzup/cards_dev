@@ -1,0 +1,7 @@
+<br>
+<%= t("hello.soon") -%>&nbsp;&nbsp;
+<% if(@locale == "ru" || @locale == "") %>
+   <%= link_to("English", :locale => "en") -%>
+<% elsif(@locale == "en") %>
+   <%= link_to("Русский", :locale => "ru") -%>
+<% end %>

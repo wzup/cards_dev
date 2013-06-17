@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="<%= (params[:locale]) ? params[:locale] : "ru" %>">
+<head>
+  <title><%= @title %></title>
+  <%= stylesheet_link_tag(@page, :media => "all") %>
+  <%= javascript_include_tag(@page) %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="layout_m mza">
+   <%=yield-%>
+</div>
+
+</body>
+</html>

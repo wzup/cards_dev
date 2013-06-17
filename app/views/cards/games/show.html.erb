@@ -1,0 +1,83 @@
+<div id="ballpark" class="mt70">
+
+  <%= render("cards/partials/notLoggedInWarn") -%>
+
+  <% if(cookies[:alert]) -%>
+    <p><%= cookies[:alert] -%></p>
+    <% cookies.delete(:alert) -%> 
+  <% end -%> 
+
+  <div id="cout" style="display: none; background: #F5FAFF;"></div>
+
+  <div id="layout_g" class="clearfix">
+
+    <div id="cardDesk_m" class="fl_l">
+      <div id="cardDesk" unselectable="on">
+        <% if @cards %>
+          <% (0..9).each do |i|
+             n = false
+          %>
+            <div class="card <% if(i != 4 && i != 9) %>mr20<% end %>" id="c_<%= i %>"
+              <% @cards.each do |x| %>
+              <%  if (x["pos"] == i.to_s) %>
+                data-isopen="1" style="background-image: url('/assets/cards/cards/<%= x["pic"] %>.gif');" data-remote="true" data-method="post" rel="nofollow"></div><% if i.eql?(4) %><br><% end %>
+              <% @cards.delete(x); n = true; break; end %>
+            <% end %>
+            <% if(n == false) %>
+              <%#= n.to_s %> data-isopen="0" style="background-image: url('/assets/cards/cards/suit.jpg');" data-remote="true" data-method="post" rel="nofollow"></div><% if i.eql?(4) %><br><% end %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div><%# cardDesk %>
+
+      <div id="links" style="padding-right:30px;" class="clearfix">
+        <%= link_to(t("game.toRegLoginPage"), :root, :class => "fl_l") -%>
+        <%= link_to(t("game.toGameIndex"), :games, :class => "fl_r") -%>
+      </div>
+    </div><%# cardDesk_m %>
+
+    <div id="gameInfo" class="fl_r" data-who="<%= @role.to_s %>">
+      <ul class="gi_ul mpz lstn">
+        <li class="gi_li_k">
+            <%= t("game.gameWord") %> <%= t("game.st_at") %>
+         </li>
+         <li id="gi_startedTime" class="gi_li_v">
+            <%= @gameStarted %>
+         </li>
+         <li class="gi_li_k">
+            <%= t("game.whoStartedGame") %>
+         </li>
+         <li id="gi_beginner" class="gi_li_v">
+            <% if(@beginner.name == cookies["name"]) %>
+               <%= t("game.you") %>, <%= @beginner.name %>
+            <% else %>
+               <%= @beginner.name %>
+            <% end %>
+         </li>
+         <hr id="gi_hr">
+         <li id="parts_n" class="gi_li_k">
+            <%= t("game.part") %><span><%= @plOnl.length.to_s %></span>
+         </li>
+
+        <div id="parts">
+             <% if(@plOnl.length > 0)
+                @plOnl.each.each_with_index { |player, i| %>
+                   <li id="pl_<%= i %>" class="gi_li_v">
+                      <% if(player.name == cookies["name"]) %>
+                         <%= t("game.you") %>, <%= player.name %>, <span class="sip">ip: <%= player.ip %></span>
+                      <% else %>
+                         <%= player.name %>, <span class="sip">ip: <%= player.ip %></span>
+                      <% end %>
+                   </li>
+                <% } %>
+             <% else %>
+                <li class="gi_li_v" style="font-weight: normal;">
+                   <%= t("game.nobody") %>
+                </li>
+             <% end %>
+        </div>
+
+      </ul>
+    </div>
+  </div>
+</div>
